@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Dinner</title>
+    <div class="container" style="text-align: center; margin-top: 5px">
+        <img src="logo.png" style="width: 250px; height: 100px">
+    </div>
+</head>
+<body>
+<button type="button" data-toggle="modal" data-target="#exampleModalCenter" style="display: none" id="button_modal">Open Modal</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Verify your age</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center">
+                <img src="frame.png" style="width: 200px; height: 200px">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="number" style="font-family: 'Lucida Sans';">
+    <div class="container" style="text-align: center">
+        <div>
+            <div style="display: inline-block; width: 280px;text-align: left; margin-top: 20px">Caesar salad - 100BC</div>
+            <div style="display: inline-block;width: 100px;text-align: center">
+                <button type="button" onClick="countChange('salad', '-')" class="btn btn-danger btn-sm minus">-</button>
+                <p id="salad" style="text-align: center; display: inline-block">0</p>
+                <button type="button" onClick="countChange('salad', '+')" class="btn btn-primary btn-sm plus">+</button>
+            </div>
+        </div>
+        <div>
+            <div style="display: inline-block; width: 280px;text-align: left; margin-top: 14px">Pasta Bolognese - 150BC</div>
+            <div style="display: inline-block;width: 100px;text-align: center">
+                <button type="button" onClick="countChange('pasta', '-')" class="btn btn-danger btn-sm minus">-</button>
+                <p id="pasta" style="text-align: center; display: inline-block">0</p>
+                <button type="button" onClick="countChange('pasta', '+')" class="btn btn-primary btn-sm plus">+</button>
+            </div>
+        </div>
+        <div>
+            <div style="display: inline-block; width: 280px;text-align: left; margin-top: 14px">Scandinavian Soup - 140BC</div>
+            <div style="display: inline-block;width: 100px;text-align: center">
+                <button type="button" onClick="countChange('soup', '-')" class="btn btn-danger btn-sm minus">-</button>
+                <p id="soup" style="text-align: center; display: inline-block">0</p>
+                <button type="button" onClick="countChange('soup', '+')" class="btn btn-primary btn-sm plus">+</button>
+            </div>
+        </div>
+        <div>
+            <div style="display: inline-block; width: 280px;text-align: left; margin-top: 14px">Cheesecake - 110BC</div>
+            <div style="display: inline-block;width: 100px;text-align: center">
+                <button type="button" onClick="countChange('cake', '-')" class="btn btn-danger btn-sm minus">-</button>
+                <p id="cake" style="text-align: center; display: inline-block">0</p>
+                <button type="button" onClick="countChange('cake', '+')" class="btn btn-primary btn-sm plus">+</button>
+            </div>
+        </div>
+        <div>
+            <div style="display: inline-block; width: 280px;text-align: left; margin-top: 14px">Cabernet Sauvignon Wine - 150BC</div>
+            <div style="display: inline-block;width: 100px;text-align: center">
+                <button type="button" onClick="countChange('wine', '-')" class="btn btn-danger btn-sm minus">-</button>
+                <p id="wine" style="text-align: center; display: inline-block">0</p>
+                <button type="button" onClick="countChange('wine', '+')" class="btn btn-primary btn-sm plus">+</button>
+            </div>
+        </div>
+        <div>
+            <p style="text-align: center; display: inline-block">Total amount: </p>
+            <p id="balance" style="text-align: center; display: inline-block">0</p>
+            <p style="text-align: center; display: inline-block">BC</p>
+        </div>
+        <div style="margin-top: -10px; margin-bottom: 20px">
+            <button type="button" class="btn btn-success btn-sm">Buy</button>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script>
+    let verified = false;
+	let countObject = {
+		'salad': 0,
+		'pasta': 0,
+		'soup': 0,
+		'cake': 0,
+		'wine': 0,
+	};
+	let priceObject = {
+		'salad': 100,
+		'pasta': 150,
+		'soup': 140,
+		'cake': 110,
+		'wine': 150,
+	};
+
+	function countChange(id, change) {
+		if (change === '+') {
+			if(id === 'wine') {
+				if (!verified) {
+					document.getElementById('button_modal').click();
+
+                } else {
+					countObject[id]++;
+                }
+            } else {
+				countObject[id]++;
+            }
+		} else {
+			if (countObject[id] > 0) {
+				countObject[id]--;
+			}
+		}
+		document.getElementById(id).innerHTML = countObject[id];
+		calc()
+	}
+
+	function calc() {
+		let value = 0;
+		for(let key in countObject) {
+			if(countObject[key] > 0) {
+				value = value + countObject[key]*priceObject[key];
+			}
+		}
+		console.log(value);
+		document.getElementById('balance').innerHTML = value;
+	}
+</script>
+</body>
+</html>
